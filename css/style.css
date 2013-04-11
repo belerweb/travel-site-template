@@ -1,0 +1,14 @@
+header .tel {
+	height: 123px;
+	line-height: 123px;
+	font-size: 40px;
+	font-family: Georgia;
+}
+
+header .navbar {
+	margin-top: 10px;
+}
+
+header .navbar-inner > .container {
+	width: 940px;
+}
