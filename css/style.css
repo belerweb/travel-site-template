@@ -1,14 +1,82 @@
-header .tel {
-	height: 123px;
-	line-height: 123px;
+#header .tel {
+	height: 60px;
+	line-height: 60px;
 	font-size: 40px;
 	font-family: Georgia;
 }
 
-header .navbar {
+#header .navbar {
 	margin-top: 10px;
+	margin-bottom: 0;
 }
 
-header .navbar-inner > .container {
+#header .navbar .navbar-inner{
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+}
+
+#header .navbar-inner .container {
 	width: 940px;
+}
+
+#full-slider {
+	height: 400px;
+	overflow: hidden;
+}
+
+#full-slider ul {
+	list-style: none;
+	margin: 0;
+}
+
+.sequence {
+	position: relative; /* required */
+}
+
+.sequence>.sequence-canvas li>* { /* required */
+	/*position: absolute;*/
+	
+}
+
+.sequence>.sequence-canvas { /* required */
+	height: 100%;
+	width: 100%;
+}
+
+.sequence>.sequence-canvas>li { /* required */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.sequence>.sequence-canvas>li>.slide {
+	background-position: center;
+	height: 400px;
+	opacity: 0;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-property: "opacity";
+	-moz-transition-property: "opacity";
+	-ms-transition-property: "opacity";
+	-o-transition-property: "opacity";
+	transition-property: "opacity";
+	-webkit-transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-ms-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function: linear;
+	height: 400px;
+}
+
+.sequence>.sequence-canvas>li.animate-in>.slide {
+	opacity: 1;
+}
+
+.sequence>.sequence-canvas>li.animate-out>.slide {
+	opacity: 0;
 }
